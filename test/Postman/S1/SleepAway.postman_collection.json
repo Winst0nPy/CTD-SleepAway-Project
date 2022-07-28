@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "5ce949cc-e181-4023-9e42-ff00530c92df",
+		"name": "SleepAway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20665745"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Post Casa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"description\": \"Casa\",\r\n        \"title\": \"Casa\",\r\n        \"imageUrl\": \"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Departamento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"description\": \"Departamento\",\r\n        \"title\": \"Departamento\",\r\n        \"imageUrl\": \"https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Hostal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"description\": \"Hostal\",\r\n        \"title\": \"Hostal\",\r\n        \"imageUrl\": \"https://images.unsplash.com/photo-1532344214108-1b6d425db572?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Hotel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"description\": \"Hotel\",\r\n        \"title\": \"Hotel\",\r\n        \"imageUrl\": \"https://images.unsplash.com/photo-1598605272254-16f0c0ecdfa5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Casa by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Error 404 por id inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"  pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/category/25"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Casa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"description\": \"CasaUpdate\",\r\n        \"title\": \"CasaUpdate\",\r\n        \"imageUrl\": \"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Casa by id after update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Casa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All after update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/category"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

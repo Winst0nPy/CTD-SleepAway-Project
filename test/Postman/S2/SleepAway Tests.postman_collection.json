@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "e436f949-7fc1-4f8c-8e3f-7cf0e15a653e",
+		"name": "SleepAway Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20665745"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "save product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 13,\r\n    \"name\": \"Guardar Producto\",\r\n    \"description\": \"En Mendoza, Tupungato, se encuentra la zona de Gualtallary; un verdadero paraíso natural al pie de la Cordillera de Los Andes, un hotel de lujo, lodge de dos habitaciones deluxe para poder disfrutar de la paz que ofrece un lugar único a los pies del Volcán Tupungato. \\nHUENTALA WINES posee un terreno de 230 hectáreas de viñedos, habitaciones de lujo con todas las comodidades y rodeadas de un paisaje mágico, restaurante y salón de usos múltiples para eventos sociales y corporativos.\\nCuenta con un resto exclusivo, donde se puede acceder cualquier día de la semana con reserva previa. En ese resto se ofrece un menú regional basado principalmente en las cocciones a los fuegos (llama, parrilla, horno de barro) y se pueden degustar los mejores vinos del Valle de Uco\",\r\n    \"latitude\": 12.0,\r\n    \"longitude\": 34.0,\r\n    \"feature\": {\r\n        \"id\": 1,\r\n        \"wifi\": true,\r\n        \"kitchen\": false,\r\n        \"free_parking\": true,\r\n        \"tv\": false,\r\n        \"pet_friendly\": false,\r\n        \"air_conditioning\": true,\r\n        \"swimming_pool\": false\r\n    },\r\n    \"category\": {\r\n        \"id\": 4,\r\n        \"description\": \"Los mejores hoteles encontralos en SleepAway\",\r\n        \"title\": \"hoteles\",\r\n        \"imageUrl\": \"https://grupo-04-bucket.s3.amazonaws.com/assets/categories/hotel.png\"\r\n    },\r\n    \"images\": [\r\n        {\r\n            \"id\": 1,\r\n            \"title\": \"1_960x600.png\",\r\n            \"url\": \"https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/1_960x600.png\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"title\": \"5_960x600.png\",\r\n            \"url\": \"https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/5_960x600.png\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"title\": \"4_960x600.png\",\r\n            \"url\": \"https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/4_960x600.png\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"title\": \"3_960x600.png\",\r\n            \"url\": \"https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/3_960x600.png\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"title\": \"2_960x600.png\",\r\n            \"url\": \"https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/2_960x600.png\"\r\n        }\r\n    ],\r\n    \"location\": {\r\n        \"id\": 1,\r\n        \"street\": \"Camino Estancia Silva\",\r\n        \"number\": \"S/N\",\r\n        \"city\": \"Gualtallary\",\r\n        \"province\": \"Mendoza\",\r\n        \"country\": \"Argentina\"\r\n    },\r\n    \"policy\": {\r\n        \"id\": 1,\r\n        \"check_in\": \"15 a 0 hrs\",\r\n        \"check_out\": \"0 a 10 hrs\",\r\n        \"child_policy\": \"En esta propiedad, los niños de 3 años o más se consideran adultos\",\r\n        \"extra_bed\": true,\r\n        \"smoke_policy\": false,\r\n        \"noice_policy\": false,\r\n        \"security_and_health\": \"En respuesta al coronavirus, este alojamiento está aplicando medidas sanitarias y de seguridad adicionales.\\nA causa del coronavirus, este alojamiento está tomando medidas para garantizar la seguridad de los huéspedes y del personal. Por este motivo, algunos servicios y amenities pueden verse limitados o no estar disponibles.\\nDebido al coronavirus, el uso de tapabocas es obligatorio en todas las zonas comunes interiores\",\r\n        \"cancelation_policy\": \"Las políticas de cancelación y de pago por adelantado pueden variar según el tipo de alojamiento. Ingresá las fechas de tu estadía y consulta las condiciones de la habitación seleccionada.\",\r\n        \"only_cash\": false\r\n    },\r\n    \"ratings\": [\r\n        {\r\n            \"id\": 1,\r\n            \"rating\": 4\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"rating\": 5\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/product",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product/1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product by id inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"  pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product/79",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product",
+								"79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by category title",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product/category/casas",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product",
+								"category",
+								"casas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by category id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product/category/id/1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product",
+								"category",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product/location/Humahuaca",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product",
+								"location",
+								"Humahuaca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product/11",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feature",
+			"item": [
+				{
+					"name": "Find feature by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/feature/8",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"feature",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/feature",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"feature"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Find location by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/location/1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"location",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all location",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/location",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "Find all ratings by product id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/rating/product/1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"rating",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,102 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  # This will stop any need for downloading dependencies and plugins.
+  MAVEN_OPTS: >-
+    -Dhttps.protocols=TLSv1.2
+    -Dmaven.repo.local=.m2/repository
+    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+    -Dorg.slf4j.simpleLogger.showDateTime=true
+    -Djava.awt.headless=true
+  MAVEN_CLI_OPTS: >-
+    --batch-mode
+    --errors
+    --fail-at-end
+    --show-version
+    -DinstallAtEnd=true
+    -DdeployAtEnd=true
+  # Environment variables for connecting to the database in aws.
+  DB_USERNAME: $DB_USERNAME
+  DB_PASSWORD: $DB_PASSWORD
+
+test frontend:
+  only:
+    - develop
+  stage: test
+  image: node:latest
+  before_script:
+    - cd frontend/proyecto-integrador/
+  script:
+    - yarn install
+    - yarn test
+
+build frontend:
+  only:
+    - develop
+  stage: build
+  image: node:latest
+  script:
+    - cd frontend/proyecto-integrador/
+    - yarn install
+    - yarn build
+  artifacts:
+    paths:
+      - build
+    untracked: false
+    expire_in: 1 days
+
+test backend:
+  only:
+    - develop
+  stage: test
+  image: maven:3-openjdk-18
+  variables:
+    DB_IP: 127.0.0.1
+    DB_PORT: 3307
+    DB_SCHEME: SleepAway
+    SRV_PORT: 8080
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan "ec2-52-206-59-32.compute-1.amazonaws.com" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - ssh -f ec2-user@ec2-52-206-59-32.compute-1.amazonaws.com -L 127.0.0.1:3307:grupo-04-db.ckiqtgesdyez.us-east-1.rds.amazonaws.com:3306 -N
+    - cd backend/SleepAway/
+  script:
+    - mvn test
+
+build backend:
+  only:
+    - develop
+  stage: build
+  image: maven:3-openjdk-18
+  variables:
+    DB_IP: 127.0.0.1
+    DB_PORT: 3307
+    DB_SCHEME: SleepAway
+    SRV_PORT: 8080
+  cache:
+    key: "maven-$CI_COMMIT_REF_SLUG"
+    paths:
+      - .m2/repository
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan "ec2-54-81-100-62.compute-1.amazonaws.com" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - ssh -f ec2-user@ec2-54-81-100-62.compute-1.amazonaws.com -L 127.0.0.1:3307:grupo-04-db.ckiqtgesdyez.us-east-1.rds.amazonaws.com:3306 -N
+    - cd backend/SleepAway/
+  script:
+    - mvn $MAVEN_CLI_OPTS package -DskipTests=true
+  artifacts:
+    name: "Maven artifacts from $CI_PROJECT_NAME on $CI_COMMIT_REF_SLUG"
+    paths:
+      - "**/target"
+    expire_in: 1 days

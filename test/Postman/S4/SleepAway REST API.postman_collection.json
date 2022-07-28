@@ -1,0 +1,5893 @@
+{
+	"info": {
+		"_postman_id": "4ce22e89-27a0-4322-b45b-a20d7898661b",
+		"name": "SleepAway REST API",
+		"description": "Camada 2 - Grupo 04 - Digital House para la carrera de Certified Tech Developer.\n\nContact Support:\n Name: Grupo-04\n Email: dacagliari@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18075863"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "Create a new booking",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"booking_time\": \"10:00\",\r\n    \"booking_starting_date\":\"2022-07-10\",\r\n    \"booking_final_date\":\"2022-07-24\",\r\n    \"product\": {\"id\": \"1\"},\r\n    \"appUser\": {\"id\": \"7\"}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/booking",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"booking"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid username/password supplied",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"appUser\": {\n    \"city\": \"ex\",\n    \"email\": \"Lorem consectetur\",\n    \"id\": 2366581,\n    \"lastName\": \"commodo minim anim qui\",\n    \"name\": \"ipsum minim et labore in\",\n    \"password\": \"aute aliqua occaecat dolore sed\",\n    \"role\": {\n      \"id\": \"consequat adipisicing\",\n      \"name\": \"esse mollit sit eu\"\n    },\n    \"username\": \"Duis ipsum elit\"\n  },\n  \"booking_final_date\": \"1986-12-29\",\n  \"booking_starting_date\": \"2017-09-10\",\n  \"booking_time\": \"2018-08-23T17:39:09.459Z\",\n  \"id\": -30132082,\n  \"product\": {\n    \"category\": {\n      \"description\": \"adipisicing mollit dolore\",\n      \"id\": 67205049,\n      \"imageUrl\": \"aliqua ipsum sunt tempor\",\n      \"title\": \"incididunt labore Lorem sunt\"\n    },\n    \"description\": \"quis eu\",\n    \"feature\": {\n      \"air_conditioning\": true,\n      \"free_parking\": true,\n      \"id\": 20246096,\n      \"kitchen\": false,\n      \"pet_friendly\": true,\n      \"swimming_pool\": false,\n      \"tv\": false,\n      \"wifi\": true\n    },\n    \"id\": -605813,\n    \"images\": [\n      {\n        \"id\": 35285858,\n        \"title\": \"commodo laborum nulla do\",\n        \"url\": \"et Lorem\"\n      },\n      {\n        \"id\": -2970263,\n        \"title\": \"aute elit ut id\",\n        \"url\": \"ipsum ut reprehenderit e\"\n      }\n    ],\n    \"latitude\": 75165795.68931544,\n    \"location\": {\n      \"city\": \"ex incididunt\",\n      \"country\": \"anim in\",\n      \"id\": -64346709,\n      \"number\": \"mollit ut qui ullamco do\",\n      \"province\": \"Lorem dolor\",\n      \"street\": \"volu\"\n    },\n    \"longitude\": -20818938.04755573,\n    \"name\": \"consequat in aliquip e\",\n    \"policy\": {\n      \"cancelation_policy\": \"esse incididunt id magna\",\n      \"check_in\": \"fugiat culpa\",\n      \"check_out\": \"sit commodo\",\n      \"child_policy\": \"tempor non in\",\n      \"extra_bed\": false,\n      \"id\": 28990991,\n      \"noice_policy\": true,\n      \"only_cash\": false,\n      \"security_and_health\": \"do amet minim eu\",\n      \"smoke_policy\": false\n    },\n    \"ratings\": [\n      {\n        \"id\": 10664725,\n        \"rating\": -13202332\n      },\n      {\n        \"id\": -72064676,\n        \"rating\": 45920453\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Find Booking by product id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/booking/product/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"booking",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-7244247",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-7244247",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-7244247",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Access denied",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-7244247",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "The product doesn't exist",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-7244247",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "NEGATIVE TEST | Get Products not booked in city between dates Copy",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/product/location?city_id=5&start_date=2022-07-23&end_date=2022-09-23",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"location"
+									],
+									"query": [
+										{
+											"key": "city_id",
+											"value": "5"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-07-23"
+										},
+										{
+											"key": "end_date",
+											"value": "2022-09-23"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "category",
+							"item": [
+								{
+									"name": "findByCategory",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const response = pm.response.json()\r",
+													"const idealProduct = pm.environment.get(\"idealProduct\")\r",
+													"const expectedObjectAttributes = JSON.parse(pm.environment.get('modelProductObject'))\r",
+													"\r",
+													"pm.test(\"Returns a body\", function(){\r",
+													"    pm.response.to.have.body()\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Objects doesn't have null attributes\", function(){\r",
+													"    // Checking if the main attributes are not null.\r",
+													"    response\r",
+													"    .forEach( obj => Object.keys(obj)\r",
+													"        .forEach( attr => {\r",
+													"            try { pm.expect(obj[attr]).is.not.oneOf([null, undefined]) }\r",
+													"            catch(e) { \r",
+													"                pm.expect(obj[attr]).is.not.oneOf([null, undefined])\r",
+													"                console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+													"        } \r",
+													"    ))\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Object has the correct attributes\", function(){\r",
+													"    response\r",
+													"    .forEach((obj, index) => {     \r",
+													"            try {pm.expect(obj).to.have.all.keys(Object.keys(expectedObjectAttributes))}\r",
+													"            catch (e) {\r",
+													"                pm.expect(obj).to.have.all.keys(Object.keys(expectedObjectAttributes))\r",
+													"                console.info(\"Object index:\" + index + \" - \" + Object.keys(obj) + \" doesn't have the expected attributes\")}\r",
+													"    })\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Object has the category id: 1\", function(){\r",
+													"    response\r",
+													"    .forEach(obj => {     \r",
+													"            try {\r",
+													"                pm.expect(obj.category.id).to.eql(1)}\r",
+													"            catch (e) {\r",
+													"                pm.expect(obj.category.id).to.eql(1)\r",
+													"                console.info(\"Object doesn't have the id searched\")}\r",
+													"    })\r",
+													"})\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/category/id/:category_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"category",
+												"id",
+												":category_id"
+											],
+											"variable": [
+												{
+													"key": "category_id",
+													"value": "1",
+													"description": "(Required) category_id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/id/:category_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														"id",
+														":category_id"
+													],
+													"variable": [
+														{
+															"key": "category_id",
+															"value": "-7244247",
+															"description": "(Required) category_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/id/:category_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														"id",
+														":category_id"
+													],
+													"variable": [
+														{
+															"key": "category_id",
+															"value": "-7244247",
+															"description": "(Required) category_id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/id/:category_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														"id",
+														":category_id"
+													],
+													"variable": [
+														{
+															"key": "category_id",
+															"value": "-7244247",
+															"description": "(Required) category_id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/id/:category_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														"id",
+														":category_id"
+													],
+													"variable": [
+														{
+															"key": "category_id",
+															"value": "-7244247",
+															"description": "(Required) category_id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "findByCategory",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const response = pm.response.json()\r",
+													"const idealProduct = pm.environment.get(\"idealProduct\")\r",
+													"const expectedObjectAttributes = JSON.parse(pm.environment.get('modelProductObject'))\r",
+													"\r",
+													"pm.test(\"Returns a body\", function(){\r",
+													"    pm.response.to.have.body()\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Objects doesn't have null attributes\", function(){\r",
+													"    // Checking if the main attributes are not null.\r",
+													"    response\r",
+													"    .forEach( obj => Object.keys(obj)\r",
+													"        .forEach( attr => {\r",
+													"            try { pm.expect(obj[attr]).is.not.oneOf([null, undefined]) }\r",
+													"            catch(e) { \r",
+													"                pm.expect(obj[attr]).is.not.oneOf([null, undefined])\r",
+													"                console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+													"        } \r",
+													"    ))\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Object has the correct attributes\", function(){\r",
+													"    response\r",
+													"    .forEach((obj, index) => {     \r",
+													"            try {pm.expect(obj).to.have.all.keys(Object.keys(expectedObjectAttributes))}\r",
+													"            catch (e) {\r",
+													"                pm.expect(obj).to.have.all.keys(Object.keys(expectedObjectAttributes))\r",
+													"                console.info(\"Object index:\" + index + \" - \" + Object.keys(obj) + \" doesn't have the expected attributes\")}\r",
+													"    })\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Object has the category title: 'casas'\", function(){\r",
+													"    response\r",
+													"    .forEach(obj => {     \r",
+													"            try {pm.expect(obj.category.title).to.eql(\"casas\")}\r",
+													"            catch (e) {\r",
+													"                pm.expect(obj.category.title).to.eql(\"casas\")\r",
+													"                console.info(\"Object doesn't have the title searched\")}\r",
+													"    })\r",
+													"})\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/category/:category_title",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"category",
+												":category_title"
+											],
+											"variable": [
+												{
+													"key": "category_title",
+													"value": "casas",
+													"description": "(Required) category_title"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/:category_title",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														":category_title"
+													],
+													"variable": [
+														{
+															"key": "category_title",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) category_title"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/:category_title",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														":category_title"
+													],
+													"variable": [
+														{
+															"key": "category_title",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) category_title"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/:category_title",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														":category_title"
+													],
+													"variable": [
+														{
+															"key": "category_title",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) category_title"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category/:category_title",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category",
+														":category_title"
+													],
+													"variable": [
+														{
+															"key": "category_title",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) category_title"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "location",
+							"item": [
+								{
+									"name": "findAllByLocationId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const response = pm.response.json()\r",
+													"const idealProduct = pm.environment.get(\"idealProduct\")\r",
+													"const expectedObjectAttributes = JSON.parse(pm.environment.get('modelProductObject'))\r",
+													"\r",
+													"pm.test(\"Returns a body\", function(){\r",
+													"    pm.response.to.have.body()\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Objects doesn't have null attributes\", function(){\r",
+													"    // Checking if the main attributes are not null.\r",
+													"    response\r",
+													"    .forEach( obj => Object.keys(obj)\r",
+													"        .forEach( attr => {\r",
+													"            try { pm.expect(obj[attr]).is.not.oneOf([null, undefined]) }\r",
+													"            catch(e) { \r",
+													"                pm.expect(obj[attr]).is.not.oneOf([null, undefined])\r",
+													"                console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+													"        } \r",
+													"    ))\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Object has the correct attributes\", function(){\r",
+													"    response\r",
+													"    .forEach((obj, index) => {     \r",
+													"            try {pm.expect(obj).to.have.all.keys(Object.keys(expectedObjectAttributes).add(\"reviews\"))}\r",
+													"            catch (e) {\r",
+													"                pm.expect(obj).to.have.all.keys(Object.keys(expectedObjectAttributes.add(\"reviews\")))\r",
+													"                console.info(\"Object index:\" + index + \" - \" + Object.keys(obj) + \" doesn't have the expected attributes\")}\r",
+													"    })\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Object has the location id: 1\", function(){\r",
+													"    response\r",
+													"    .forEach(obj => {     \r",
+													"            try {pm.expect(obj.location.id).to.eql(1)}\r",
+													"            catch (e) {\r",
+													"                pm.expect(obj.location.id).to.eql(1)\r",
+													"                console.info(\"Object doesn't have the id searched\")}\r",
+													"    })\r",
+													"})\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/location/id/:location_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"location",
+												"id",
+												":location_id"
+											],
+											"variable": [
+												{
+													"key": "location_id",
+													"value": "1",
+													"description": "(Required) location_id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/id/:location_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														"id",
+														":location_id"
+													],
+													"variable": [
+														{
+															"key": "location_id",
+															"value": "-7244247",
+															"description": "(Required) location_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/id/:location_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														"id",
+														":location_id"
+													],
+													"variable": [
+														{
+															"key": "location_id",
+															"value": "-7244247",
+															"description": "(Required) location_id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/id/:location_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														"id",
+														":location_id"
+													],
+													"variable": [
+														{
+															"key": "location_id",
+															"value": "-7244247",
+															"description": "(Required) location_id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/id/:location_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														"id",
+														":location_id"
+													],
+													"variable": [
+														{
+															"key": "location_id",
+															"value": "-7244247",
+															"description": "(Required) location_id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "findAllByCity",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/location/:city",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"location",
+												":city"
+											],
+											"variable": [
+												{
+													"key": "city",
+													"value": "Gualtallary",
+													"description": "(Required) city"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/:city",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														":city"
+													],
+													"variable": [
+														{
+															"key": "city",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) city"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/:city",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														":city"
+													],
+													"variable": [
+														{
+															"key": "city",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) city"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/:city",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														":city"
+													],
+													"variable": [
+														{
+															"key": "city",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) city"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/location/:city",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"location",
+														":city"
+													],
+													"variable": [
+														{
+															"key": "city",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) city"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "findById",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const response = pm.response.json()\r",
+													"const expectedObject = pm.environment.get('modelProductObject')\r",
+													"\r",
+													"pm.test(\"Returns a body\", function(){\r",
+													"    pm.response.to.have.body()\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Object doesn't have null attributes\", function(){\r",
+													"    // Checking if the main attributes are not null.\r",
+													"    Object.keys(response)\r",
+													"        .forEach( attr => {\r",
+													"            try { pm.expect(response[attr]).is.not.oneOf([null, undefined]) }\r",
+													"            catch(e) { console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+													"        } \r",
+													"    )\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Object has all expected attributes\", function(){\r",
+													"    // Checking all attributes\r",
+													"    try { pm.expect(response).to.have.all.keys(...expectedObject) }\r",
+													"    catch(e) {console.info(\"Object doesn't have the expected attributes\")}\r",
+													"    \r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "delete",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-7244247",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "findAll",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const expectedObjectAttributes = {\r",
+											"    \"id\": 0,\r",
+											"    \"name\": \"string\",\r",
+											"    \"description\": \"string\",\r",
+											"    \"latitude\": 0,\r",
+											"    \"longitude\": 0,\r",
+											"    \"features\": [],\r",
+											"    \"category\": {},\r",
+											"    \"images\": [],\r",
+											"    \"location\": {},\r",
+											"    \"policy\": {},\r",
+											"    \"ratings\": []\r",
+											"}\r",
+											"\r",
+											"const expectedObjectAttributesArray = Object.keys(expectedObjectAttributes);\r",
+											"\r",
+											"let response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Returns a body\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Objects doesn't have null attributes\", function(){\r",
+											"    // Checking if the main attributes are not null.\r",
+											"    response\r",
+											"    .forEach( obj => Object.keys(obj)\r",
+											"        .forEach( attr => {\r",
+											"            try { pm.expect(obj[attr]).is.not.oneOf([null, undefined]) }\r",
+											"            catch(e) { console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+											"        } \r",
+											"    ))\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Object has the correct attributes\", function(){\r",
+											"    response\r",
+											"    .forEach((obj, index) => {     \r",
+											"            try {pm.expect(obj).to.have.all.keys(...expectedObjectAttributesArray)}\r",
+											"            catch (e) {console.info(\"Object index:\" + index + \" - \" + Object.keys(obj) + \" doesn't have the expected attributes\")}\r",
+											"    })\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const expectedObjectAttributes = {\r",
+											"    \"id\": 0,\r",
+											"    \"name\": \"string\",\r",
+											"    \"description\": \"string\",\r",
+											"    \"latitude\": 0,\r",
+											"    \"longitude\": 0,\r",
+											"    \"features\": [],\r",
+											"    \"category\": {},\r",
+											"    \"images\": [],\r",
+											"    \"location\": {},\r",
+											"    \"policy\": {},\r",
+											"    \"ratings\": []\r",
+											"}\r",
+											"\r",
+											"const expectedObjectAttributesArray = Object.keys(expectedObjectAttributes);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "<API Key>",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Create new product",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const randomDescription = pm.variables.replaceIn('{{$randomLoremParagraph}}');\r",
+											"const randomTitle = pm.variables.replaceIn('{{$randomLoremWords}}');\r",
+											"const randomImageUrl = pm.variables.replaceIn('{{$randomImageUrl}}');\r",
+											"const randomLastName = pm.variables.replaceIn('{{$randomLastName}}');\r",
+											"const randomCity = pm.variables.replaceIn('{{$randomCity}}');\r",
+											"const randomEmail = pm.variables.replaceIn('{{$randomEmail}}');\r",
+											"const randomName = pm.variables.replaceIn('{{$randomProductName}}')\r",
+											"\r",
+											"\r",
+											"const newProduct = {\r",
+											"  \"name\": \"ut voluptate ea\",\r",
+											"  \"description\": randomDescription,\r",
+											"  \"latitude\": -28.42157402182268,\r",
+											"  \"longitude\": -81.58119817566289,\r",
+											"  \"features\": [\r",
+											"            {\r",
+											"                \"name\": \"TV\",\r",
+											"                \"react_icon\": \"FiMonitor\"\r",
+											"            },\r",
+											"            {\r",
+											"                \"name\": \"Articulos de cuidado\",\r",
+											"                \"react_icon\": \"MdOutlineHealthAndSafety\"\r",
+											"            }\r",
+											"        ],\r",
+											"  \"category\": {\"id\":1},\r",
+											"  \"images\": [\r",
+											"    { \r",
+											"      \"title\": randomTitle,\r",
+											"      \"url\": randomImageUrl\r",
+											"    },\r",
+											"    {\r",
+											"      \"title\": randomTitle,\r",
+											"      \"url\": randomImageUrl\r",
+											"    }\r",
+											"  ],\r",
+											"  \"location\": {\r",
+											"    \"city\": \"consequat\",\r",
+											"    \"country\": \"laborum aliquip irure ci\",\r",
+											"    \"number\": \"123465\",\r",
+											"    \"province\": \"eiusmod culpa occaecat anim veniam\",\r",
+											"    \"street\": \"in tempor dolor deserunt\"\r",
+											"  },\r",
+											"  \"policy\": {\r",
+											"    \"cancellation_policy\": \"velit id ut exercitation\",\r",
+											"    \"check_in\": \"eiusmod id esse\",\r",
+											"    \"check_out\": \"Excepteur\",\r",
+											"    \"child_policy\": \"in veniam\",\r",
+											"    \"extra_bed\": true,\r",
+											"    \"noise_policy\": false,\r",
+											"    \"only_cash\": false,\r",
+											"    \"security_and_health\": \"proident sit sint exercitation amet\",\r",
+											"    \"smoke_policy\": false,\r",
+											"    \"accepts_all_ages\": true\r",
+											"  }\r",
+											"}\r",
+											"\r",
+											"pm.environment.set(\"newProduct\", JSON.stringify(newProduct))"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "<API Key>",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{{newProduct}}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category\": {\n    \"description\": \"Ut velit est aute\",\n    \"id\": 30016104,\n    \"imageUrl\": \"nulla labor\",\n    \"title\": \"dolore proident\"\n  },\n  \"description\": \"culpa reprehenderit nulla velit irure\",\n  \"feature\": {\n    \"air_conditioning\": true,\n    \"free_parking\": true,\n    \"id\": -55098429,\n    \"kitchen\": false,\n    \"pet_friendly\": false,\n    \"swimming_pool\": false,\n    \"tv\": true,\n    \"wifi\": false\n  },\n  \"id\": -31699823,\n  \"images\": [\n    {\n      \"id\": 28694779,\n      \"title\": \"dolore culpa ad occaecat adipisicing\",\n      \"url\": \"laboris mollit in aute nisi\"\n    },\n    {\n      \"id\": -71883369,\n      \"title\": \"Excepteur Lorem ut commodo consequat\",\n      \"url\": \"laborum nisi tempor magna\"\n    }\n  ],\n  \"latitude\": -48873982.66979472,\n  \"location\": {\n    \"city\": \"consequat\",\n    \"country\": \"laborum aliquip irure ci\",\n    \"id\": 53119931,\n    \"number\": \"vol\",\n    \"province\": \"eiusmod culpa occaecat anim veniam\",\n    \"street\": \"in tempor dolor deserunt\"\n  },\n  \"longitude\": -37328719.31914698,\n  \"name\": \"ut voluptate ea\",\n  \"policy\": {\n    \"cancelation_policy\": \"velit id ut exercitation\",\n    \"check_in\": \"eiusmod id esse\",\n    \"check_out\": \"Excepteur\",\n    \"child_policy\": \"in veniam\",\n    \"extra_bed\": true,\n    \"id\": -48965913,\n    \"noice_policy\": false,\n    \"only_cash\": false,\n    \"security_and_health\": \"proident sit sint exercitation amet\",\n    \"smoke_policy\": false\n  },\n  \"ratings\": [\n    {\n      \"id\": 97527130,\n      \"rating\": 87584534\n    },\n    {\n      \"id\": -8159856,\n      \"rating\": -2149606\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category\": {\n    \"description\": \"Ut velit est aute\",\n    \"id\": 30016104,\n    \"imageUrl\": \"nulla labor\",\n    \"title\": \"dolore proident\"\n  },\n  \"description\": \"culpa reprehenderit nulla velit irure\",\n  \"feature\": {\n    \"air_conditioning\": true,\n    \"free_parking\": true,\n    \"id\": -55098429,\n    \"kitchen\": false,\n    \"pet_friendly\": false,\n    \"swimming_pool\": false,\n    \"tv\": true,\n    \"wifi\": false\n  },\n  \"id\": -31699823,\n  \"images\": [\n    {\n      \"id\": 28694779,\n      \"title\": \"dolore culpa ad occaecat adipisicing\",\n      \"url\": \"laboris mollit in aute nisi\"\n    },\n    {\n      \"id\": -71883369,\n      \"title\": \"Excepteur Lorem ut commodo consequat\",\n      \"url\": \"laborum nisi tempor magna\"\n    }\n  ],\n  \"latitude\": -48873982.66979472,\n  \"location\": {\n    \"city\": \"consequat\",\n    \"country\": \"laborum aliquip irure ci\",\n    \"id\": 53119931,\n    \"number\": \"vol\",\n    \"province\": \"eiusmod culpa occaecat anim veniam\",\n    \"street\": \"in tempor dolor deserunt\"\n  },\n  \"longitude\": -37328719.31914698,\n  \"name\": \"ut voluptate ea\",\n  \"policy\": {\n    \"cancelation_policy\": \"velit id ut exercitation\",\n    \"check_in\": \"eiusmod id esse\",\n    \"check_out\": \"Excepteur\",\n    \"child_policy\": \"in veniam\",\n    \"extra_bed\": true,\n    \"id\": -48965913,\n    \"noice_policy\": false,\n    \"only_cash\": false,\n    \"security_and_health\": \"proident sit sint exercitation amet\",\n    \"smoke_policy\": false\n  },\n  \"ratings\": [\n    {\n      \"id\": 97527130,\n      \"rating\": 87584534\n    },\n    {\n      \"id\": -8159856,\n      \"rating\": -2149606\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category\": {\n    \"description\": \"Ut velit est aute\",\n    \"id\": 30016104,\n    \"imageUrl\": \"nulla labor\",\n    \"title\": \"dolore proident\"\n  },\n  \"description\": \"culpa reprehenderit nulla velit irure\",\n  \"feature\": {\n    \"air_conditioning\": true,\n    \"free_parking\": true,\n    \"id\": -55098429,\n    \"kitchen\": false,\n    \"pet_friendly\": false,\n    \"swimming_pool\": false,\n    \"tv\": true,\n    \"wifi\": false\n  },\n  \"id\": -31699823,\n  \"images\": [\n    {\n      \"id\": 28694779,\n      \"title\": \"dolore culpa ad occaecat adipisicing\",\n      \"url\": \"laboris mollit in aute nisi\"\n    },\n    {\n      \"id\": -71883369,\n      \"title\": \"Excepteur Lorem ut commodo consequat\",\n      \"url\": \"laborum nisi tempor magna\"\n    }\n  ],\n  \"latitude\": -48873982.66979472,\n  \"location\": {\n    \"city\": \"consequat\",\n    \"country\": \"laborum aliquip irure ci\",\n    \"id\": 53119931,\n    \"number\": \"vol\",\n    \"province\": \"eiusmod culpa occaecat anim veniam\",\n    \"street\": \"in tempor dolor deserunt\"\n  },\n  \"longitude\": -37328719.31914698,\n  \"name\": \"ut voluptate ea\",\n  \"policy\": {\n    \"cancelation_policy\": \"velit id ut exercitation\",\n    \"check_in\": \"eiusmod id esse\",\n    \"check_out\": \"Excepteur\",\n    \"child_policy\": \"in veniam\",\n    \"extra_bed\": true,\n    \"id\": -48965913,\n    \"noice_policy\": false,\n    \"only_cash\": false,\n    \"security_and_health\": \"proident sit sint exercitation amet\",\n    \"smoke_policy\": false\n  },\n  \"ratings\": [\n    {\n      \"id\": 97527130,\n      \"rating\": 87584534\n    },\n    {\n      \"id\": -8159856,\n      \"rating\": -2149606\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category\": {\n    \"description\": \"Ut velit est aute\",\n    \"id\": 30016104,\n    \"imageUrl\": \"nulla labor\",\n    \"title\": \"dolore proident\"\n  },\n  \"description\": \"culpa reprehenderit nulla velit irure\",\n  \"feature\": {\n    \"air_conditioning\": true,\n    \"free_parking\": true,\n    \"id\": -55098429,\n    \"kitchen\": false,\n    \"pet_friendly\": false,\n    \"swimming_pool\": false,\n    \"tv\": true,\n    \"wifi\": false\n  },\n  \"id\": -31699823,\n  \"images\": [\n    {\n      \"id\": 28694779,\n      \"title\": \"dolore culpa ad occaecat adipisicing\",\n      \"url\": \"laboris mollit in aute nisi\"\n    },\n    {\n      \"id\": -71883369,\n      \"title\": \"Excepteur Lorem ut commodo consequat\",\n      \"url\": \"laborum nisi tempor magna\"\n    }\n  ],\n  \"latitude\": -48873982.66979472,\n  \"location\": {\n    \"city\": \"consequat\",\n    \"country\": \"laborum aliquip irure ci\",\n    \"id\": 53119931,\n    \"number\": \"vol\",\n    \"province\": \"eiusmod culpa occaecat anim veniam\",\n    \"street\": \"in tempor dolor deserunt\"\n  },\n  \"longitude\": -37328719.31914698,\n  \"name\": \"ut voluptate ea\",\n  \"policy\": {\n    \"cancelation_policy\": \"velit id ut exercitation\",\n    \"check_in\": \"eiusmod id esse\",\n    \"check_out\": \"Excepteur\",\n    \"child_policy\": \"in veniam\",\n    \"extra_bed\": true,\n    \"id\": -48965913,\n    \"noice_policy\": false,\n    \"only_cash\": false,\n    \"security_and_health\": \"proident sit sint exercitation amet\",\n    \"smoke_policy\": false\n  },\n  \"ratings\": [\n    {\n      \"id\": 97527130,\n      \"rating\": 87584534\n    },\n    {\n      \"id\": -8159856,\n      \"rating\": -2149606\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category\": {\n    \"description\": \"Ut velit est aute\",\n    \"id\": 30016104,\n    \"imageUrl\": \"nulla labor\",\n    \"title\": \"dolore proident\"\n  },\n  \"description\": \"culpa reprehenderit nulla velit irure\",\n  \"feature\": {\n    \"air_conditioning\": true,\n    \"free_parking\": true,\n    \"id\": -55098429,\n    \"kitchen\": false,\n    \"pet_friendly\": false,\n    \"swimming_pool\": false,\n    \"tv\": true,\n    \"wifi\": false\n  },\n  \"id\": -31699823,\n  \"images\": [\n    {\n      \"id\": 28694779,\n      \"title\": \"dolore culpa ad occaecat adipisicing\",\n      \"url\": \"laboris mollit in aute nisi\"\n    },\n    {\n      \"id\": -71883369,\n      \"title\": \"Excepteur Lorem ut commodo consequat\",\n      \"url\": \"laborum nisi tempor magna\"\n    }\n  ],\n  \"latitude\": -48873982.66979472,\n  \"location\": {\n    \"city\": \"consequat\",\n    \"country\": \"laborum aliquip irure ci\",\n    \"id\": 53119931,\n    \"number\": \"vol\",\n    \"province\": \"eiusmod culpa occaecat anim veniam\",\n    \"street\": \"in tempor dolor deserunt\"\n  },\n  \"longitude\": -37328719.31914698,\n  \"name\": \"ut voluptate ea\",\n  \"policy\": {\n    \"cancelation_policy\": \"velit id ut exercitation\",\n    \"check_in\": \"eiusmod id esse\",\n    \"check_out\": \"Excepteur\",\n    \"child_policy\": \"in veniam\",\n    \"extra_bed\": true,\n    \"id\": -48965913,\n    \"noice_policy\": false,\n    \"only_cash\": false,\n    \"security_and_health\": \"proident sit sint exercitation amet\",\n    \"smoke_policy\": false\n  },\n  \"ratings\": [\n    {\n      \"id\": 97527130,\n      \"rating\": 87584534\n    },\n    {\n      \"id\": -8159856,\n      \"rating\": -2149606\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "findRandom",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json()\r",
+											"const idealProduct = pm.environment.get(\"idealProduct\")\r",
+											"const expectedObjectAttributes = pm.environment.get('modelProductObject')\r",
+											"\r",
+											"pm.test(\"Returns 8 objects from db\", function() {\r",
+											"    pm.expect(response.length).to.equal(8);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Returns a body\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Objects doesn't have null attributes\", function(){\r",
+											"    // Checking if the main attributes are not null.\r",
+											"    response\r",
+											"    .forEach( obj => Object.keys(obj)\r",
+											"        .forEach( attr => {\r",
+											"            try { pm.expect(obj[attr]).is.not.oneOf([null, undefined]) }\r",
+											"            catch(e) { console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+											"        } \r",
+											"    ))\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Object has the correct attributes\", function(){\r",
+											"    response\r",
+											"    .forEach((obj, index) => {     \r",
+											"            try {pm.expect(obj).to.have.all.keys(...expectedObjectAttributesArray)}\r",
+											"            catch (e) {console.info(\"Object index:\" + index + \" - \" + Object.keys(obj) + \" doesn't have the expected attributes\")}\r",
+											"    })\r",
+											"})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "<API Key>",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/product/random",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"random"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/random",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"random"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/random",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"random"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/random",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"random"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/random",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"random"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get Products not booked in city between dates",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/product/location?city_id=5&start_date=2022-07-23&end_date=2022-09-23",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"location"
+									],
+									"query": [
+										{
+											"key": "city_id",
+											"value": "5"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-07-23"
+										},
+										{
+											"key": "end_date",
+											"value": "2022-09-23"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "{username}",
+							"item": [
+								{
+									"name": "Search user (ADMIN ONLY)",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/:username",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												":username"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "{{currentEmail}}",
+													"description": "Search user"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Something went wrong",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Access denied",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "The user doesn't exist",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Expired or invalid JWT token",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete user (ADMIN ONLY)",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/:username",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut",
+													"description": "(Required) Username"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "Excepteur ad veniam ut"
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Something went wrong",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Access denied",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "The user doesn't exist",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Expired or invalid JWT token",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "Excepteur ad veniam ut",
+															"description": "(Required) Username"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Current User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const currentUser = JSON.parse(pm.environment.get(\"currentUser\"));\r",
+											"\r",
+											"pm.test(\"Response property matches current user\", function(){\r",
+											"    Object.keys(currentUser).forEach(attribute =>  \r",
+											"        pm.expect(pm.response.json().attribute).to.eql(currentUser.attribute)\r",
+											"    );\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"me"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"me"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"me"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Access denied",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"me"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"me"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Expired or invalid JWT token",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"me"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "refresh",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const TOKEN = pm.response.text()\r",
+											"pm.environment.set(\"Token\", TOKEN)\r",
+											"\r",
+											"pm.test(\"Returns a Token\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/refresh",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"refresh"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"refresh"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "Excepteur ad veniam ut"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"refresh"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"refresh"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"refresh"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Sign in as user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const TOKEN = pm.response.text()\r",
+											"pm.environment.set(\"Token\", TOKEN)\r",
+											"pm.environment.set(\"currentUser\", pm.environment.get(\"newUserToSignup\"))\r",
+											"\r",
+											"pm.test(\"Returns a Token\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/signin?password={{PASSWORD}}&email={{currentEmail}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"signin"
+									],
+									"query": [
+										{
+											"key": "password",
+											"value": "{{PASSWORD}}",
+											"description": "(Required) password"
+										},
+										{
+											"key": "email",
+											"value": "{{currentEmail}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "Excepteur ad veniam ut"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid username/password supplied",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signin?password=Excepteur ad veniam ut&username=Excepteur ad veniam ut",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signin"
+											],
+											"query": [
+												{
+													"key": "password",
+													"value": "Excepteur ad veniam ut"
+												},
+												{
+													"key": "username",
+													"value": "Excepteur ad veniam ut"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Registry a new user",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const randomName = pm.variables.replaceIn('{{$randomFirstName}}')\r",
+											"const randomLastName = pm.variables.replaceIn('{{$randomLastName}}')\r",
+											"const randomCity = pm.variables.replaceIn('{{$randomCity}}')\r",
+											"const randomEmail = pm.variables.replaceIn('{{$randomEmail}}')\r",
+											"\r",
+											"var newUserToSignup = {\r",
+											"  \"name\": randomName,\r",
+											"  \"lastName\": randomLastName,\r",
+											"  \"city\": randomCity,\r",
+											"  \"email\": randomEmail,\r",
+											"  \"password\": \"12345678\"\r",
+											"}\r",
+											"\r",
+											"pm.environment.set(\"randomEmail\", randomEmail)\r",
+											"pm.environment.set(\"currentEmail\", randomEmail)\r",
+											"pm.environment.set(\"newUserToSignup\", JSON.stringify(newUserToSignup))"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"requestRegistryANewUser\", pm.request)\r",
+											"\r",
+											"\r",
+											"pm.test(\"Returns a Token\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{{newUserToSignup}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "Excepteur ad veniam ut"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Access denied",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Username is already in use",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Registry a new user Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const randomName = pm.variables.replaceIn('{{$randomFirstName}}')\r",
+											"const randomLastName = pm.variables.replaceIn('{{$randomLastName}}')\r",
+											"const randomCity = pm.variables.replaceIn('{{$randomCity}}')\r",
+											"const randomEmail = pm.variables.replaceIn('{{$randomEmail}}')\r",
+											"\r",
+											"var newUserToSignup = {\r",
+											"  \"name\": randomName,\r",
+											"  \"lastName\": randomLastName,\r",
+											"  \"city\": randomCity,\r",
+											"  \"email\": randomEmail,\r",
+											"  \"password\": \"123456\"\r",
+											"}\r",
+											"\r",
+											"pm.environment.set(\"randomEmail\", randomEmail)\r",
+											"pm.environment.set(\"newUserToSignup\", JSON.stringify(newUserToSignup))"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{{newUserToSignup}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "Excepteur ad veniam ut"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Access denied",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Username is already in use",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "NEGATIVE TESTS | Trying to registry new user with same email in db",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const randomName = pm.variables.replaceIn('{{$randomFirstName}}')\r",
+											"const randomLastName = pm.variables.replaceIn('{{$randomLastName}}')\r",
+											"const randomCity = pm.variables.replaceIn('{{$randomCity}}')\r",
+											"const currentEmail = pm.environment.get(\"currentEmail\")\r",
+											"\r",
+											"var userWithEmailInUse = {\r",
+											"  \"name\": randomName,\r",
+											"  \"lastName\": randomLastName,\r",
+											"  \"city\": randomCity,\r",
+											"  \"email\": currentEmail,\r",
+											"  \"password\": \"12345678\"\r",
+											"}\r",
+											"\r",
+											"pm.environment.set(\"userWithEmailInUse\", JSON.stringify(userWithEmailInUse))"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status 422, Username is already in use\", function(){\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{{userWithEmailInUse}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "Excepteur ad veniam ut"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Access denied",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Username is already in use",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"city\": \"magna reprehenderit sunt laboris \",\n  \"email\": \"labore esse ut sit\",\n  \"lastName\": \"enim ullamco\",\n  \"name\": \"qui in eiusmod deserunt\",\n  \"password\": \"aliquip culpa nisi velit\",\n  \"username\": \"pariatur culpa anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "location",
+					"item": [
+						{
+							"name": "Get all location",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();\r",
+											"const expectedObjectAttributes = [\"id\", \"street\", \"number\", \"city\", \"province\", \"country\"];\r",
+											"\r",
+											"pm.test(\"Returns a body\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Objects doesn't have null attributes\", function(){\r",
+											"    // Checking if the main attributes are not null.\r",
+											"    response\r",
+											"    .forEach( obj => Object.keys(obj)\r",
+											"        .forEach( attr => {\r",
+											"            try { pm.expect(obj[attr]).is.not.oneOf([null, undefined]) }\r",
+											"            catch(e) { console.info(\"Attribute: \" + att + \"is null|undefined.\") }\r",
+											"        } \r",
+											"    ))\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Object has the correct attributes\", function(){\r",
+											"    response\r",
+											"    .forEach((obj, index) => {     \r",
+											"            try {pm.expect(obj).to.have.all.keys(...expectedObjectAttributes)}\r",
+											"            catch (e) {console.info(\"Object index:\" + index + \" - \" + Object.keys(obj) + \" doesn't have the expected attributes\")}\r",
+											"    })\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/location",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"location"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "get all categories",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// saving the API Response as a variable\r",
+											"let response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Returns 4 objects from db\", function() {\r",
+											"    pm.expect(response.length).to.equal(4);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Returns a body\", function(){\r",
+											"    pm.response.to.have.body()\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Object doesn't have null|undefined attributes\", function(){\r",
+											"    response\r",
+											"    .forEach( obj => Object.keys(obj)\r",
+											"        .forEach( attr => pm.expect(obj[attr]).is.not.oneOf([null, undefined])))\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"function registryNewUsers(numberOfNewUsers){",
+					"    Array.fill(numberOfNewUsers).forEach(",
+					"        () => {",
+					"           pm.sendRequest(pm.environment.get(\"requestRegistryANewUser\"));",
+					"        }",
+					"    )",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const isNegativeTesting = pm.info.requestName.startsWith(\"NEGATIVE\");",
+					"",
+					"if(isNegativeTesting){",
+					"    pm.test(\"Negative test, status code is 400|422|403|404|500\", function(){",
+					"        pm.expect(pm.response.code).to.be.oneOf([400,422,403,404,500])",
+					"    })",
+					"} else {",
+					"    pm.test(\"Positive test, status code is 200|201\", function () {",
+					"        pm.expect(pm.response.code).to.be.oneOf([200,201])",
+					"    });",
+					"}",
+					"",
+					"pm.test(\"Response time is less than 1200ms\", () => {",
+					"  pm.expect(pm.response.responseTime).to.be.below(1200);",
+					"});",
+					"",
+					"",
+					""
+				]
+			}
+		}
+	]
+}

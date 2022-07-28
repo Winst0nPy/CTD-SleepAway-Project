@@ -1,0 +1,19 @@
+{
+  "img": [
+    {
+      "1": "https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/1_960x600.png"
+    },
+    {
+      "2": "https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/2_960x600.png"
+    },
+    {
+      "3": "https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/3_960x600.png"
+    },
+    {
+      "4": "https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/4_960x600.png"
+    },
+    {
+      "5": "https://grupo-04-bucket.s3.amazonaws.com/categories/hotels/1/5_960x600.png"
+    }
+  ]
+}

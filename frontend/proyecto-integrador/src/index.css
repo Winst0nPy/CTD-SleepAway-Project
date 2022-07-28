@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+:root{
+  --contrast--color: #e0536d;
+  --contrast--dark: #4D5564;
+  --contrast--black: #191B1D;
+  --contrast--light: #F5F5F5;
+  --contrast--background-dark:#4d556423;
+  --contrast--background-light:#e0536d25;
+  --linked-button-color: #e0536d;
+  --contrast--background-available: #8cf03a57;
+  --contrast--background-reserved: #201a1a33;
+  --contrast--background-today: #e0536da2;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', serif;
+}
+

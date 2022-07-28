@@ -1,0 +1,425 @@
+{
+	"id": "81488fc8-02ca-43ff-9cc2-20f9ee945d76",
+	"name": "SleepAway",
+	"timestamp": "2022-05-26T18:16:39.662Z",
+	"collection_id": "20665745-5ce949cc-e181-4023-9e42-ff00530c92df",
+	"folder_id": "20665745-d702d492-ac7c-48a6-9b18-9404c66a1cf9",
+	"environment_id": "0",
+	"totalPass": 22,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "48cb4815-710c-42cf-b22e-5c07fd676279",
+			"name": "Post Casa",
+			"url": "http://localhost:8080/api/category",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "bfb5fa51-753b-40ca-adfa-85d15809bfa5",
+			"name": "Post Departamento",
+			"url": "http://localhost:8080/api/category",
+			"time": 28,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "75283889-4f4c-4f93-83ee-9aec89e15c98",
+			"name": "Post Hostal",
+			"url": "http://localhost:8080/api/category",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "b8b04750-6399-4603-88c2-e9a154e85685",
+			"name": "Post Hotel",
+			"url": "http://localhost:8080/api/category",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "c3ca250c-730d-41d8-83da-b62f60f59406",
+			"name": "Find Casa by id",
+			"url": "http://localhost:8080/api/category/1",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "3aaf91ca-bfc9-4dd9-b4cd-04daeb34ce45",
+			"name": "Error 404 por id inexistente",
+			"url": "http://localhost:8080/api/category/25",
+			"time": 13,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "cddfaf91-66ca-4eb0-be02-376462054983",
+			"name": "Find All",
+			"url": "http://localhost:8080/api/category",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "5fd6da65-0740-468b-9134-82dde46a6948",
+			"name": "Update Casa",
+			"url": "http://localhost:8080/api/category/1",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "6863544c-0cb9-46bf-9aeb-0bb7b0689960",
+			"name": "Find Casa by id after update",
+			"url": "http://localhost:8080/api/category/1",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "6403d997-b8ca-48d5-a8e2-a549594b92cc",
+			"name": "Delete Casa",
+			"url": "http://localhost:8080/api/category/1",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "8d1e964f-67d7-4e6b-b4b8-c06dc459b59c",
+			"name": "Find All after update",
+			"url": "http://localhost:8080/api/category",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 196,
+	"collection": {
+		"requests": [
+			{
+				"id": "48cb4815-710c-42cf-b22e-5c07fd676279",
+				"method": "POST"
+			},
+			{
+				"id": "bfb5fa51-753b-40ca-adfa-85d15809bfa5",
+				"method": "POST"
+			},
+			{
+				"id": "75283889-4f4c-4f93-83ee-9aec89e15c98",
+				"method": "POST"
+			},
+			{
+				"id": "b8b04750-6399-4603-88c2-e9a154e85685",
+				"method": "POST"
+			},
+			{
+				"id": "c3ca250c-730d-41d8-83da-b62f60f59406",
+				"method": "GET"
+			},
+			{
+				"id": "3aaf91ca-bfc9-4dd9-b4cd-04daeb34ce45",
+				"method": "GET"
+			},
+			{
+				"id": "cddfaf91-66ca-4eb0-be02-376462054983",
+				"method": "GET"
+			},
+			{
+				"id": "5fd6da65-0740-468b-9134-82dde46a6948",
+				"method": "PUT"
+			},
+			{
+				"id": "6863544c-0cb9-46bf-9aeb-0bb7b0689960",
+				"method": "GET"
+			},
+			{
+				"id": "6403d997-b8ca-48d5-a8e2-a549594b92cc",
+				"method": "DELETE"
+			},
+			{
+				"id": "8d1e964f-67d7-4e6b-b4b8-c06dc459b59c",
+				"method": "GET"
+			}
+		]
+	}
+}

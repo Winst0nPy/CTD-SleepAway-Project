@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  front:
+    build:
+      context: ./proyecto-integrador
+      dockerfile: ./Dockerfile
+    image: "winst0n/grupo-04-frontend:production_01"
+    restart: always
+    container_name: sleepaway-frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api

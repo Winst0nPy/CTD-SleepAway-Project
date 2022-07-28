@@ -1,0 +1,499 @@
+{
+	"id": "d305b2bc-f1ef-4d42-934f-07c43baefbc3",
+	"name": "SleepAway Tests",
+	"timestamp": "2022-06-09T19:34:54.172Z",
+	"collection_id": "20665745-e436f949-7fc1-4f8c-8e3f-7cf0e15a653e",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 17,
+	"totalFail": 9,
+	"results": [
+		{
+			"id": "c6354f3e-34ff-4811-81ae-18e1cb933a04",
+			"name": "save product",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product",
+			"time": 431,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				431
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "570e7385-5b19-4cc7-8e64-83d6d0fae7dd",
+			"name": "Find Product by id",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product/1",
+			"time": 201,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				201
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "341859db-fb2d-4bad-ac17-5b04abed8c74",
+			"name": "Find Product by id inexistente",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product/79",
+			"time": 202,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				202
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "48432d4e-e397-4ae8-9d83-4a71ccbdebe5",
+			"name": "Find all",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product",
+			"time": 482,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				482
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "3434f802-b918-42ee-a401-d6f9b796533c",
+			"name": "Find by category title",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product/category/casas",
+			"time": 218,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				218
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "f72a0108-bac4-4956-b5ce-a6a909492331",
+			"name": "Find by category id",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product/category/id/1",
+			"time": 231,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				231
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "a4b290db-70cc-46eb-ad90-c4b7d00ece2f",
+			"name": "Find by city",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product/location/Humahuaca",
+			"time": 210,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				210
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "f2c88dd5-374f-41d3-a475-e25eb0bb977d",
+			"name": "Delete product",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/product/11",
+			"time": 195,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				195
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "883f379a-fede-47a7-a660-1ca44bd254d9",
+			"name": "Find feature by id",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/feature/8",
+			"time": 361,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				361
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "37373f42-3a08-4ef8-990a-c11765f26bd5",
+			"name": "Find all",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/feature",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "2d87f691-6427-4492-816d-802cd0573107",
+			"name": "Find location by id",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/location/1",
+			"time": 182,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				182
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "5bfa5de2-f13f-4706-aa55-8c9b5ab4e275",
+			"name": "Find all location",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/location",
+			"time": 181,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				181
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "5b6884a0-cafa-42de-aace-bb7a754840ff",
+			"name": "Find all ratings by product id",
+			"url": "http://ec2-54-81-100-62.compute-1.amazonaws.com:8090/api/rating/product/1",
+			"time": 181,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				181
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3264,
+	"collection": {
+		"requests": [
+			{
+				"id": "c6354f3e-34ff-4811-81ae-18e1cb933a04",
+				"method": "POST"
+			},
+			{
+				"id": "570e7385-5b19-4cc7-8e64-83d6d0fae7dd",
+				"method": "GET"
+			},
+			{
+				"id": "341859db-fb2d-4bad-ac17-5b04abed8c74",
+				"method": "GET"
+			},
+			{
+				"id": "48432d4e-e397-4ae8-9d83-4a71ccbdebe5",
+				"method": "GET"
+			},
+			{
+				"id": "3434f802-b918-42ee-a401-d6f9b796533c",
+				"method": "GET"
+			},
+			{
+				"id": "f72a0108-bac4-4956-b5ce-a6a909492331",
+				"method": "GET"
+			},
+			{
+				"id": "a4b290db-70cc-46eb-ad90-c4b7d00ece2f",
+				"method": "GET"
+			},
+			{
+				"id": "f2c88dd5-374f-41d3-a475-e25eb0bb977d",
+				"method": "DELETE"
+			},
+			{
+				"id": "883f379a-fede-47a7-a660-1ca44bd254d9",
+				"method": "GET"
+			},
+			{
+				"id": "37373f42-3a08-4ef8-990a-c11765f26bd5",
+				"method": "GET"
+			},
+			{
+				"id": "2d87f691-6427-4492-816d-802cd0573107",
+				"method": "GET"
+			},
+			{
+				"id": "5bfa5de2-f13f-4706-aa55-8c9b5ab4e275",
+				"method": "GET"
+			},
+			{
+				"id": "5b6884a0-cafa-42de-aace-bb7a754840ff",
+				"method": "GET"
+			}
+		]
+	}
+}
